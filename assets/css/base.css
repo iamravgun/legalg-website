@@ -1,0 +1,183 @@
+/* ==========================================================================
+   Base — @font-face, element defaults, the four site-wide signatures
+   (gold rule, serif figures, link underline, focus ring), page transitions
+   and the reduced-motion override.
+   ========================================================================== */
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter-variable.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("../fonts/source-serif-4-variable.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-16);
+  line-height: var(--leading-body);
+  color: var(--grey-900);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-heading);
+  color: var(--ink-900);
+  margin: 0 0 var(--space-16);
+}
+h1 { font-size: var(--text-48); letter-spacing: var(--tracking-tight); }
+h2 { font-size: var(--text-38); letter-spacing: var(--tracking-tight); }
+h3 { font-size: var(--text-30); letter-spacing: var(--tracking-tight); }
+h4 { font-size: var(--text-24); }
+h5 { font-size: var(--text-20); }
+h6 { font-size: var(--text-18); }
+
+p { margin: 0 0 var(--space-16); max-width: var(--prose-max); }
+
+a { color: var(--ink-900); text-decoration: none; }
+a:hover { color: var(--gold-800); }
+
+ul, ol { margin: 0; padding: 0; list-style: none; }
+
+button { font-family: inherit; cursor: pointer; background: none; border: none; color: inherit; }
+
+input, select, textarea { font-family: inherit; font-size: var(--text-16); color: var(--grey-900); }
+
+table { border-collapse: collapse; width: 100%; }
+
+/* ---- Text links: colour shift + a 1px underline drawn left to right ----
+   Unclassed links (prose, footer lists, segment rows) and .text-link get it.
+   The background is a single solid colour (currentColor to currentColor),
+   used only because background-size is what animates — not a gradient. */
+a:not([class]):not(:has(svg)),
+.text-link {
+  background-image: linear-gradient(var(--underline, currentColor), var(--underline, currentColor));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0 1px;
+  padding-bottom: 3px; /* underline offset */
+  transition: background-size var(--t-fast) var(--ease-out), color var(--t-fast) var(--ease-out);
+}
+a:not([class]):not(:has(svg)):hover,
+.text-link:hover { background-size: 100% 1px; }
+.mega-menu a, .drawer-list a, .search-results a { background-image: none; }
+
+.text-link { font-size: var(--text-14); font-weight: var(--weight-semibold); color: var(--gold-800); white-space: nowrap; }
+
+/* Focus ring — never transitioned: it must appear the instant focus lands.
+   Ink on light surfaces (17.4:1), gold-400 on deep ones (6.37:1). */
+:focus-visible {
+  outline: 2px solid var(--focus-ring, var(--ink-900));
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ---- Deep surfaces: one scope sets text, focus and underline colours --- */
+.surface-deep {
+  --focus-ring: var(--gold-400);
+  --underline: var(--gold-400);
+  background: var(--surface-deep);
+  color: var(--on-deep);
+}
+
+/* ---- Signature 1: the gold rule — 3px × 32px above a label ------------- */
+.eyebrow::before,
+.ruled::before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 3px;
+  background: var(--rule, var(--gold-600));
+  margin-bottom: var(--space-12);
+}
+.eyebrow {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--text-12);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--gold-800);
+  margin: 0 0 var(--space-12);
+}
+.eyebrow--centred { text-align: center; }
+.eyebrow--centred::before { margin-left: auto; margin-right: auto; }
+
+/* ---- Signature 2: serif figures — every number on the site ------------- */
+.fig {
+  font-family: var(--font-serif);
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---- Page transitions (View Transitions API, cross-document) ----------
+   Header, footer and the mobile bars hold still; <main> cross-fades; a
+   service card title and its page H1 share a name and morph. Browsers
+   without support simply navigate. */
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+  @view-transition { navigation: auto; }
+}
+@supports (view-transition-name: none) {
+  .site-header { view-transition-name: site-header; }
+  .site-footer { view-transition-name: site-footer; }
+  .mobile-sticky-bar { view-transition-name: mobile-bar; }
+  .whatsapp-fab { view-transition-name: whatsapp-fab; }
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation-duration: var(--t-base);
+    animation-timing-function: var(--ease-out);
+  }
+}
+
+/* ---- Reduced motion: everything resolves instantly -------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---- Print: deep surfaces become white with dark text ----------------- */
+@media print {
+  body, section, .surface-deep, .surface-deep * { background: #fff !important; color: #000 !important; }
+  .surface-deep, .surface-deep * { border-color: #ccc !important; }
+  .utility-bar, .mega-menu, .mobile-drawer, .drawer-overlay, .mobile-sticky-bar, .whatsapp-fab, .hamburger, .main-bar__actions, .finder__search { display: none !important; }
+  .site-header { position: static; border-top: 0; }
+  [data-reveal] { opacity: 1 !important; transform: none !important; }
+  body { padding-bottom: 0; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.85em; }
+}

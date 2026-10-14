@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Service pages — /services/<slug>.html
+   Desktop: main 64% / sidebar 36%, 48px gap. The DOM order is head → aside
+   → body, so on mobile the enquiry card naturally sits right after the spec
+   strip; on desktop grid areas move it into the right column.
+   ========================================================================== */
+
+.svc { padding: var(--space-32) 0 0; }
+.svc__grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-32); padding-bottom: var(--space-64); }
+
+.svc__head .breadcrumbs { margin-bottom: var(--space-20); }
+.svc__head .filing-ref { margin-bottom: var(--space-12); }
+.svc__title { font-size: var(--text-28); line-height: 1.15; letter-spacing: -0.01em; text-wrap: balance; margin: 0 0 var(--space-24); }
+.svc__spec { max-width: 560px; }
+
+/* Sidebar */
+.svc__advisor { margin-top: var(--space-24); padding-top: var(--space-20); border-top: 1px solid var(--border-light); }
+.svc__advisor-title { font-size: var(--text-15); font-weight: var(--weight-semibold); color: var(--ink-900); margin: 0 0 var(--space-8); }
+.svc__advisor-line { font-size: var(--text-15); margin: 0 0 var(--space-4); }
+.svc__advisor-line a { font-weight: var(--weight-semibold); }
+.svc__advisor-hours { font-size: var(--text-13); color: var(--grey-600); margin: var(--space-8) 0 0; }
+
+/* Content sections — each opens with the gold rule (signature 1) */
+.svc-section { padding-top: var(--space-40); }
+.svc-section:first-child { padding-top: var(--space-8); }
+.svc-section__title { font-size: var(--text-24); margin: 0 0 var(--space-20); }
+.svc-prose p { font-size: var(--text-16); color: var(--grey-900); max-width: 68ch; }
+.svc-prose p:last-child { margin-bottom: 0; }
+.svc-section .accordion__item:first-child { border-top: var(--border-default); }
+
+/* Related services — full width below the two columns */
+.svc-related { background: var(--cream-100); border-top: var(--border-default); padding: var(--space-56) 0; }
+
+@media (min-width: 1024px) {
+  .svc { padding-top: var(--space-40); }
+  .svc__grid {
+    grid-template-columns: minmax(0, 64fr) minmax(0, 36fr);
+    grid-template-areas: "head aside" "body aside";
+    grid-template-rows: auto 1fr;
+    column-gap: var(--space-48);
+    row-gap: var(--space-24);
+    padding-bottom: var(--space-80);
+  }
+  .svc__head { grid-area: head; }
+  .svc__body { grid-area: body; }
+  .svc__aside { grid-area: aside; }
+  .svc__aside-inner { position: sticky; top: 128px; }
+  .svc__title { font-size: var(--text-38); }
+  .svc-related { padding: var(--space-80) 0; }
+}

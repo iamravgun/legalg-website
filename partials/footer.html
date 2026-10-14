@@ -1,0 +1,81 @@
+<footer class="site-footer surface-deep">
+  <div class="container">
+    <div class="site-footer__columns">
+<!--BLOCK:footerColumns-->
+      <div class="footer-col footer-col--contact">
+        <h3 class="footer-col__title">Get in Touch</h3>
+        <address class="footer-contact">
+          <p>{{siteAddressLine1}}<br />{{siteAddressLine2}}<br />{{siteAddressCity}}, {{siteAddressState}} {{siteAddressPincode}}</p>
+          <p><a href="tel:{{sitePhoneHref}}"><span class="fig">{{sitePhone}}</span></a></p>
+          <p><a href="{{siteWhatsappHref}}" target="_blank" rel="noopener">WhatsApp: {{siteWhatsapp}}</a></p>
+          <p><a href="mailto:{{siteEmailHref}}">{{siteEmail}}</a></p>
+        </address>
+        <h3 class="footer-col__title footer-col__title--spaced">Business Hours</h3>
+        <ul class="footer-hours">
+<!--BLOCK:footerHours-->
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-footer__brand-row">
+      <a href="/" class="brand brand--footer">
+        <span class="brand__chip"><img src="/assets/img/logo-mark.png" alt="" width="32" height="32" class="brand__mark" /></span>
+        <span class="brand__word">Legal<span class="brand__g">G</span> Associates</span>
+      </a>
+      <p class="site-footer__positioning">Company registration, GST &amp; tax filing, trademark &amp; IP, and regulatory compliance advisory for Indian businesses.</p>
+      <ul class="social-links">
+        <li><a href="{{siteSocialLinkedIn}}" aria-label="LegalG Associates on LinkedIn" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5v6M8 7.7v.01M12 16.5v-3.7c0-1.1.9-2 2-2s2 .9 2 2v3.7M12 12.8v3.7"/></svg></a></li>
+        <li><a href="{{siteSocialTwitter}}" aria-label="LegalG Associates on X" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19"/></svg></a></li>
+        <li><a href="{{siteSocialFacebook}}" aria-label="LegalG Associates on Facebook" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 21v-7h2.5l.5-3H14V9c0-.9.3-1.5 1.7-1.5H17V4.9c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4V11H8.5v3H11v7"/></svg></a></li>
+        <li><a href="{{siteSocialYoutube}}" aria-label="LegalG Associates on YouTube" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M11 10.2v3.6l3.2-1.8Z" fill="currentColor" stroke="none"/></svg></a></li>
+      </ul>
+    </div>
+
+    <div class="site-footer__payments">
+      <span class="site-footer__payments-label">Accepted payments</span>
+      <ul class="payment-list">
+<!--BLOCK:paymentMethods-->
+      </ul>
+    </div>
+  </div>
+
+  <div class="site-footer__bar">
+    <div class="container">
+    <p class="site-footer__disclaimer">{{siteDisclaimer}}</p>
+
+    <div class="site-footer__bottom">
+      <p class="site-footer__copyright">&copy; <span id="footer-year" class="fig"></span> {{siteLegalEntity}}. All rights reserved.</p>
+      <ul class="policy-links">
+<!--BLOCK:policyLinks-->
+      </ul>
+    </div>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-sticky-bar">
+  <a href="tel:{{sitePhoneHref}}" class="mobile-sticky-bar__item">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1v3.5c0 .6-.4 1-1 1C10.6 21.1 2.9 13.4 2.9 4.1c0-.6.4-1 1-1H7.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1L6.6 10.8Z"/></svg>
+    <span>Call</span>
+  </a>
+  <a href="{{siteWhatsappHref}}" class="mobile-sticky-bar__item" target="_blank" rel="noopener">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 9 18.5L4 20Z"/></svg>
+    <span>WhatsApp</span>
+  </a>
+  <a href="{{stickyHref}}" class="mobile-sticky-bar__item mobile-sticky-bar__item--primary">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 15h6M9 9h2"/></svg>
+    <span>{{stickyLabel}}</span>
+  </a>
+</div>
+
+<a href="{{siteWhatsappHref}}" class="whatsapp-fab" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 32 32" fill="#ffffff" aria-hidden="true">
+    <path d="M16.04 3C9.13 3 3.5 8.6 3.5 15.48c0 2.73.9 5.26 2.42 7.32L4.4 28l5.36-1.4a12.6 12.6 0 0 0 6.28 1.67h.01c6.9 0 12.54-5.6 12.54-12.48C28.59 8.9 22.95 3 16.04 3Z" fill="none" stroke="#ffffff" stroke-width="1.6"/>
+    <path d="M11.9 10.1c-.28-.63-.5-.64-.76-.65h-.65c-.23 0-.6.08-.9.4-.32.32-1.2 1.15-1.2 2.82s1.22 3.28 1.4 3.5c.16.23 2.36 3.7 5.75 5.06 2.85 1.13 3.42.9 4.04.85.62-.06 2-.8 2.28-1.58.28-.78.28-1.44.2-1.58-.08-.14-.3-.23-.62-.4-.32-.16-2-1-2.3-1.1-.32-.1-.54-.16-.77.16-.23.32-.88 1.1-1.08 1.32-.2.23-.4.26-.72.1-.32-.16-1.37-.5-2.6-1.62-.97-.86-1.62-1.93-1.8-2.25-.2-.32-.02-.5.14-.66.14-.14.32-.36.48-.55.16-.18.2-.32.32-.53.1-.2.05-.4-.02-.55-.08-.16-.68-1.7-.99-2.34Z" fill="#ffffff"/>
+  </svg>
+</a>
+
+<script src="/data/navigation.js" defer></script>
+<script src="/assets/js/nav.js" defer></script>
+<script src="/assets/js/drawer.js" defer></script>
+<script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>

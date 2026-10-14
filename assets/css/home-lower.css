@@ -1,0 +1,80 @@
+/* ==========================================================================
+   Homepage, lower sections: how it works, featured services, why LegalG,
+   clients, testimonials, final CTA — plus the page-wide section
+   surfaces. Loaded by index.html only, after home.css.
+   ========================================================================== */
+
+/* ---- 5. How it works — the shared .steps component, row layout (content.css) */
+.how-it-works { padding: var(--space-56) 0; }
+
+/* ---- 6. Featured services + testimonials: scroll-snap carousel <768px -- */
+.featured-services { padding: var(--space-56) 0; }
+.carousel__track { display: flex; gap: var(--space-16); overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; }
+.carousel__track > * { flex: 0 0 calc(100% - 48px); scroll-snap-align: start; }
+.carousel__dots { display: flex; justify-content: center; gap: var(--space-8); margin-top: var(--space-20); }
+.carousel__dot { width: 8px; height: 8px; border-radius: 50%; background: var(--border); padding: 0; transition: background-color var(--t-fast) var(--ease-out); }
+.carousel__dot[aria-selected="true"] { background: var(--gold-600); }
+@media (min-width: 768px) {
+  .carousel__track { display: grid; overflow: visible; }
+  .carousel__track > * { flex: initial; }
+  .carousel__dots { display: none; }
+}
+
+/* ---- 7. Why LegalG — 40/60 --------------------------------------------- */
+.why-legalg { padding: var(--space-56) 0; }
+.why-legalg__grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-40); }
+.why-legalg__title { max-width: 16ch; }
+.why-legalg__desc { color: var(--grey-600); max-width: 46ch; margin: 0 0 var(--space-24); }
+.why-legalg__point { padding: var(--space-24) 0; border-bottom: var(--border-default); }
+.why-legalg__point:first-child { padding-top: 0; }
+.why-legalg__point-title { font-size: var(--text-18); margin: 0 0 var(--space-4); }
+.why-legalg__point-desc { font-size: var(--text-14); color: var(--grey-600); margin: 0; max-width: 48ch; }
+@media (min-width: 900px) {
+  .why-legalg__grid { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: var(--space-64); align-items: start; }
+  .who-we-work-with__grid { grid-template-columns: minmax(0, 35fr) minmax(0, 65fr); gap: var(--space-64); align-items: start; }
+}
+
+/* ---- 8. Clients — a static wordmark row --------------------------------- */
+.clients { padding: var(--space-40) 0; }
+.clients__label { text-align: center; font-size: var(--text-13); color: var(--grey-600); margin: 0 auto var(--space-20); }
+.clients__list { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-8) var(--space-12); }
+.clients__item { background: var(--white); padding: var(--space-4) var(--space-12); border: var(--border-default); border-radius: var(--radius-sm); font-family: var(--font-serif); font-size: var(--text-14); color: var(--grey-600); white-space: nowrap; }
+
+/* ---- 9. Testimonials ---------------------------------------------------- */
+.testimonials { padding: var(--space-56) 0; }
+.testimonial-card { margin: 0; background: var(--white); border: var(--border-default); border-radius: var(--radius-md); padding: var(--space-24); display: flex; flex-direction: column; }
+.testimonial-card__quote { margin: 0 0 var(--space-20); flex: 1; color: var(--ink-900); line-height: 1.6; }
+.testimonial-card__attribution { display: flex; align-items: center; gap: var(--space-12); padding-top: var(--space-16); border-top: var(--border-default); margin-bottom: var(--space-12); }
+.testimonial-card__initials { flex: none; width: 40px; height: 40px; border-radius: 50%; background: var(--gold-100); color: var(--gold-800); font-family: var(--font-serif); font-weight: var(--weight-semibold); display: flex; align-items: center; justify-content: center; }
+.testimonial-card__name { display: block; font-size: var(--text-14); font-weight: var(--weight-semibold); color: var(--ink-900); }
+.testimonial-card__role, .testimonial-card__meta { display: block; font-size: var(--text-13); color: var(--grey-600); margin: 0; }
+
+/* ---- 11. Final CTA ------------------------------------------------------ */
+.final-cta { padding: var(--space-56) 0; }
+.final-cta .section-title { color: var(--on-deep); }
+.final-cta__inner { max-width: 640px; }
+.final-cta__desc { color: var(--on-deep-muted); margin: 0 0 var(--space-24); }
+.final-cta__actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-12) var(--space-20); margin-bottom: var(--space-16); }
+.final-cta__phone { font-size: var(--text-18); font-weight: var(--weight-semibold); color: var(--on-deep); }
+.final-cta__phone:hover { color: var(--gold-300); }
+.final-cta__hours { font-size: var(--text-13); color: var(--on-deep-muted); margin: 0; }
+
+@media (min-width: 1024px) {
+  .who-we-work-with, .how-it-works { padding: var(--space-80) 0; }
+  .featured-services, .why-legalg, .testimonials { padding: var(--space-96) 0; }
+  .final-cta { padding: var(--space-72) 0; }
+}
+
+/* ---- Section surfaces — one place owns the page rhythm -----------------
+   Cream-50 / cream-100 carry the rhythm; the one green-100 section and the
+   deep CTA carry the contrast. Every section keeps 1px rules top and bottom. */
+.hero, .handle, .faq, .featured-services, .testimonials { background: var(--cream-50); }
+.finder, .who-we-work-with, .how-it-works, .clients { background: var(--cream-100); }
+.why-legalg { background: var(--green-100); }
+.final-cta { background: var(--green-900); }
+.finder, .handle, .who-we-work-with, .faq, .how-it-works, .featured-services, .why-legalg, .clients, .testimonials, .final-cta {
+  border-top: var(--border-default);
+  border-bottom: var(--border-default);
+}
+.finder + section, .handle + section, .who-we-work-with + section, .faq + section, .how-it-works + section, .featured-services + section,
+.why-legalg + section, .clients + section, .testimonials + section { border-top: 0; }

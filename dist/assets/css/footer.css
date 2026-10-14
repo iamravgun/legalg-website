@@ -1,0 +1,80 @@
+/* ==========================================================================
+   Footer — deep forest green (.surface-deep sets text, focus and underline
+   colours). The bottom bar steps up to green-800. Hover never relies on
+   colour alone: every link also draws its gold-400 underline.
+   ========================================================================== */
+
+.site-footer { border-top: var(--border-default); padding-top: var(--section-pad-sm); }
+
+.site-footer__columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-32) var(--space-24);
+  padding-bottom: var(--space-40);
+  border-bottom: 1px solid var(--border-deep);
+}
+@media (min-width: 768px) { .site-footer__columns { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 1024px) { .site-footer__columns { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-40) var(--space-32); } }
+
+.footer-col { min-width: 0; }
+.footer-col__title {
+  font-family: var(--font-sans);
+  font-size: var(--text-12);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--gold-400);
+  margin: 0 0 var(--space-16);
+}
+.footer-col__title--spaced { margin-top: var(--space-24); }
+.footer-col__list { display: grid; gap: var(--space-8); }
+.site-footer a:not([class]) { color: var(--on-deep-muted); overflow-wrap: break-word; }
+.site-footer a:not([class]):hover { color: var(--on-deep); }
+.footer-col__list a { font-size: var(--text-14); }
+
+.footer-contact { font-style: normal; font-size: var(--text-14); color: var(--on-deep-muted); display: grid; gap: var(--space-8); min-width: 0; }
+.footer-contact p { margin: 0; overflow-wrap: break-word; }
+.footer-hours { display: grid; gap: var(--space-4); }
+.footer-hours li { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0 var(--space-12); font-size: var(--text-13); color: var(--on-deep-muted); }
+
+.site-footer__brand-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-20); padding: var(--space-24) 0; border-bottom: 1px solid var(--border-deep); }
+/* No knockout logo exists, so the mark sits on a gold-100 chip; multiply
+   turns the PNG's white ground into the chip colour. */
+.brand__chip { display: inline-flex; padding: var(--space-4); background: var(--gold-100); border-radius: var(--radius-sm); }
+.brand__chip .brand__mark { mix-blend-mode: multiply; }
+.brand--footer .brand__word { color: var(--on-deep); }
+.brand--footer .brand__g { color: var(--gold-400); }
+.site-footer__positioning { flex: 1; min-width: 220px; font-size: var(--text-14); color: var(--on-deep-muted); margin: 0; }
+.social-links { display: flex; gap: var(--space-12); }
+.social-links a {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: var(--radius-sm);
+  border: 1px solid var(--border-deep); color: var(--on-deep-muted);
+  transition: border-color var(--t-fast) var(--ease-out), color var(--t-fast) var(--ease-out), background-color var(--t-fast) var(--ease-out);
+}
+.social-links a:hover { color: var(--on-deep); border-color: var(--gold-400); background: var(--green-700); }
+
+.site-footer__payments { display: flex; align-items: center; gap: var(--space-16); flex-wrap: wrap; padding: var(--space-20) 0 var(--space-32); }
+.site-footer__payments-label { font-size: var(--text-13); color: var(--on-deep-muted); }
+.payment-list { display: flex; gap: var(--space-8); flex-wrap: wrap; }
+.payment-chip {
+  display: inline-flex; align-items: center; gap: var(--space-4);
+  padding: var(--space-4) var(--space-8);
+  border: 1px solid var(--border-deep); border-radius: var(--radius-sm);
+  font-size: var(--text-12); color: var(--on-deep-muted);
+  opacity: 0.7; /* 4.68:1 at this opacity */
+  transition: opacity var(--t-fast) var(--ease-out);
+}
+.payment-chip:hover { opacity: 1; }
+
+.site-footer__bar { background: var(--green-800); padding: var(--space-24) 0; }
+.site-footer__disclaimer { font-size: var(--text-14); color: var(--on-deep-muted); margin: 0; max-width: none; }
+.site-footer__bottom {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-12);
+  margin-top: var(--space-20); padding-top: var(--space-16); border-top: 1px solid var(--border-deep);
+}
+.site-footer__copyright { font-size: var(--text-13); color: var(--on-deep-muted); margin: 0; }
+.policy-links { display: flex; flex-wrap: wrap; gap: var(--space-16); }
+.policy-links a { font-size: var(--text-13); }
+
+.demo-main { padding: var(--section-pad-md) 0; min-height: 60vh; }

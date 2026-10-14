@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>LegalG Associates — Company Registration, GST &amp; Tax, Trademark &amp; Licensing</title>
+  <meta name="description" content="Company registration, GST and income tax filing, trademark and IP, sector regulatory licensing, and environmental compliance for Indian businesses — filed correctly, tracked to completion." />
+  <link rel="canonical" href="https://www.legalgassociates.in/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="LegalG Associates" />
+  <meta property="og:title" content="LegalG Associates — Company Registration, GST &amp; Tax, Trademark &amp; Licensing" />
+  <meta property="og:description" content="Company registration, GST and income tax filing, trademark and IP, sector regulatory licensing, and environmental compliance for Indian businesses." />
+  <meta property="og:url" content="https://www.legalgassociates.in/" />
+  <meta name="twitter:card" content="summary" />
+<!--PARTIAL:head-->
+  <link rel="stylesheet" href="/assets/css/content.css" />
+  <link rel="stylesheet" href="/assets/css/home.css" />
+  <link rel="stylesheet" href="/assets/css/home-lower.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "LegalG Associates",
+    "url": "https://www.legalgassociates.in/",
+    "logo": "https://www.legalgassociates.in/assets/img/logo.png",
+    "telephone": "+91 98765 43210",
+    "email": "advisory@legalgassociates.in",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "4th Floor, Ashoka Chambers, Residency Road",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560025",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "LegalG Associates",
+    "url": "https://www.legalgassociates.in/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.legalgassociates.in/services.html?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <!--BLOCK:faqJsonLd-->
+</head>
+<body>
+<!--PARTIAL:header-->
+
+  <main id="main">
+
+    <!-- 1. Hero — asymmetric 58/42: text left, image slot right -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__main">
+          <p class="eyebrow">Legal, Tax &amp; Compliance Advisory</p>
+          <h1 class="hero__title">Every filing has a name on it.</h1>
+          <p class="hero__subline">Incorporation, GST, trademarks and sector licences — handled by one named advisor who stays with your file until the certificate is in your hand.</p>
+          <!-- VERIFY before launch -->
+          <ul class="hero__points">
+            <li>One advisor per file</li>
+            <li>A written quote before any payment</li>
+            <li>Filed by CAs, CSs and advocates</li>
+          </ul>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="/contact.html?intent=quote">Get a quote</a>
+            <a class="btn btn--secondary" href="tel:{{sitePhoneHref}}">Call <span class="fig">{{sitePhone}}</span></a>
+          </div>
+        </div>
+        <div class="hero__aside">
+          <div class="callback-card" id="callback-form">
+            <h2 class="callback-card__title">Request a callback</h2>
+            <p class="callback-card__intro" data-form-intro>Tell us what you need. A compliance advisor calls back within one working day.</p>
+            <!-- VERIFY callback turnaround before launch -->
+            <form class="callback-card__form" data-validate="callback" novalidate>
+              <div class="field">
+                <label class="field__label" for="cb-name">Full name</label>
+                <input class="field__input" type="text" id="cb-name" name="name" autocomplete="name" data-rule="required" data-label="your full name" />
+              </div>
+              <div class="field">
+                <label class="field__label" for="cb-phone">Phone number</label>
+                <input class="field__input" type="tel" id="cb-phone" name="phone" autocomplete="tel" inputmode="numeric" placeholder="10-digit mobile number" data-rule="required phone" data-label="your phone number" />
+              </div>
+              <div class="field">
+                <label class="field__label" for="cb-service">Service you need</label>
+                <select class="field__select" id="cb-service" name="service" data-rule="required" data-label="the service you need">
+                  <option value="" selected disabled>Select a service</option>
+<!--BLOCK:callbackServiceOptions-->
+                </select>
+              </div>
+              <button type="submit" class="btn btn--primary btn--block"><span class="btn__label">Request callback</span></button>
+              <p class="callback-card__privacy">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+                <span>We don't share your details. No obligation.</span>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Search band — the page's one search. Everything sits in a 760px
+         centred column; nothing here runs the full container width. -->
+    <section class="finder" aria-labelledby="finder-title">
+      <div class="container">
+        <div class="finder__inner">
+          <p class="eyebrow eyebrow--centred finder__eyebrow">Find Your Service</p>
+          <h2 class="finder__title" id="finder-title"><span class="fig">{{totalServices}}</span> services. Start by naming yours.</h2>
+          <p class="finder__lede">Search by service, form number or issuing authority.</p>
+          <div class="finder__search" role="search">
+            <label for="service-search" class="visually-hidden">Search all {{totalServices}} services</label>
+            <div class="search-box">
+              <svg class="search-box__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+              <input
+                type="text"
+                id="service-search"
+                class="search-box__input"
+                placeholder="e.g. GSTR-3B, TM-A, FSSAI state licence"
+                autocomplete="off"
+                role="combobox"
+                aria-expanded="false"
+                aria-controls="search-results"
+                aria-autocomplete="list"
+              />
+              <span id="search-result-count" class="visually-hidden" aria-live="polite"></span>
+            </div>
+            <ul id="search-results" class="search-results" role="listbox" aria-label="Search results" hidden></ul>
+          </div>
+          <p class="finder__popular-label" id="popular-label">Popular services</p>
+          <ul class="finder__chips" aria-labelledby="popular-label">
+<!--BLOCK:popularServices-->
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. What we handle — positioning block + six category panels -->
+    <section class="handle" aria-labelledby="handle-title">
+      <div class="container handle__grid">
+        <div class="handle__intro">
+          <p class="eyebrow">What We Handle</p>
+          <h2 class="handle__title" id="handle-title">Six practice areas.<br />One advisor per file.</h2>
+          <p class="handle__desc">The statutory work an Indian business meets from incorporation onward: SPICe+ and LLP formation, GSTIN and monthly GSTR-1 and 3B returns, TM-A trademark filings, FSSAI, BIS and CPCB licences, ISO certification, and FEMA and SEBI reporting once foreign or listed capital is involved.</p>
+          <!-- VERIFY before launch -->
+          <p class="handle__desc">Each matter goes to one CA, CS or advocate. They prepare the documents, file with the department, follow the SRN or ARN through the queue and hand you the certificate. You deal with the same person throughout.</p>
+          <p class="handle__counts"><!--BLOCK:handleCounts--></p>
+          <div class="handle__actions">
+            <a class="btn btn--primary" href="/services.html">Browse all services</a>
+            <a class="btn btn--secondary" href="/contact.html">Talk to an advisor</a>
+          </div>
+        </div>
+        <div class="handle__panels">
+<!--BLOCK:categoryPanels-->
+        </div>
+      </div>
+    </section>
+
+    <!-- 3A. Who we work with — organises by customer type, not service -->
+    <section class="who-we-work-with">
+      <div class="container who-we-work-with__grid">
+        <div class="who-we-work-with__intro">
+          <p class="eyebrow">Who We Work With</p>
+          <h2 class="section-title who-we-work-with__title">Find the compliance path for where you are.</h2>
+          <p class="who-we-work-with__desc">The panels above are organised by practice area. These are organised by who you are — pick the row that matches your situation.</p>
+        </div>
+        <div class="who-we-work-with__segments">
+<!--BLOCK:segments-->
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Before you hand over a filing — FAQ, 34/66 like "What we handle" -->
+    <section class="faq" aria-labelledby="faq-title">
+      <div class="container faq__grid">
+        <div class="faq__intro">
+          <p class="eyebrow">Common Questions</p>
+          <h2 class="faq__title" id="faq-title">Before you hand over<br />a filing</h2>
+          <p class="faq__desc">Almost everyone asks the same six things before they send us a document. The answers are here, so you have them before anyone calls you.</p>
+          <div class="faq__nudge">
+            <p class="faq__nudge-title">Question not here?</p>
+            <p class="faq__nudge-desc">Ask an advisor directly — no form to fill first.</p>
+            <p class="faq__nudge-links"><a href="{{siteWhatsappHref}}" target="_blank" rel="noopener">WhatsApp us</a> <span aria-hidden="true">·</span> <a href="tel:{{sitePhoneHref}}"><span class="fig">{{sitePhone}}</span></a></p>
+          </div>
+        </div>
+        <div class="accordion faq__list">
+<!--BLOCK:faqItems-->
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. How it works -->
+    <section class="how-it-works">
+      <div class="container">
+        <div class="how-it-works__header">
+          <p class="eyebrow">How We Work</p>
+          <h2 class="section-title">Four steps, one advisor</h2>
+        </div>
+        <ol class="steps steps--row">
+          <li class="steps__item">
+            <span class="steps__index">1</span>
+            <h3 class="steps__title">Scope the filing</h3>
+            <p class="steps__desc">We confirm which forms apply and what documents you need, and send a written quote before any payment.</p>
+          </li>
+          <li class="steps__item">
+            <span class="steps__index">2</span>
+            <h3 class="steps__title">Collect and verify</h3>
+            <p class="steps__desc">Your advisor checks every document against the registrar's current checklist, so it isn't rejected on a technicality.</p>
+          </li>
+          <li class="steps__item">
+            <span class="steps__index">3</span>
+            <h3 class="steps__title">File and track</h3>
+            <p class="steps__desc">We submit, note the SRN, and follow the queue. You see the status without asking for it.</p>
+          </li>
+          <li class="steps__item">
+            <span class="steps__index">4</span>
+            <h3 class="steps__title">Hand over</h3>
+            <p class="steps__desc">Certificate, acknowledgement and a note on what's due next, all in one place.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 6. Featured services -->
+    <section class="featured-services">
+      <div class="container">
+        <div class="featured-services__header">
+          <div>
+            <p class="eyebrow">Most Requested</p>
+            <h2 class="section-title">Services businesses start with</h2>
+          </div>
+          <a class="text-link" href="/services.html">All <span class="fig">{{totalServices}}</span> services</a>
+        </div>
+        <div class="carousel">
+          <div class="card-grid card-grid--3 carousel__track" id="featured-services-track">
+<!--BLOCK:featuredServices-->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Why LegalG -->
+    <section class="why-legalg">
+      <div class="container why-legalg__grid">
+        <div class="why-legalg__intro">
+          <p class="eyebrow">Why LegalG</p>
+          <h2 class="section-title why-legalg__title">Compliance work you don't have to follow up on.</h2>
+          <p class="why-legalg__desc">Most firms are fast at taking on a filing and slow at telling you what happened to it. We assign one advisor per file, put a written quote in front of you before any payment, and keep qualified professionals — not the newest hire — on the actual submission.</p>
+          <a class="btn btn--secondary" href="/contact.html">Talk to an expert</a>
+        </div>
+        <div class="why-legalg__points">
+          <div class="why-legalg__point">
+            <h3 class="why-legalg__point-title ruled">A named advisor, not a ticket queue</h3>
+            <!-- VERIFY before launch -->
+            <p class="why-legalg__point-desc">The same person handles your file start to finish, with a direct number.</p>
+          </div>
+          <div class="why-legalg__point">
+            <h3 class="why-legalg__point-title ruled">A written quote before any payment</h3>
+            <p class="why-legalg__point-desc">Scope and charges agreed in writing first, with nothing added mid-filing.</p>
+          </div>
+          <div class="why-legalg__point">
+            <h3 class="why-legalg__point-title ruled">Filed by qualified professionals</h3>
+            <!-- VERIFY before launch -->
+            <p class="why-legalg__point-desc">CAs, CSs and advocates do the work; juniors don't sign off on your submission.</p>
+          </div>
+          <div class="why-legalg__point">
+            <h3 class="why-legalg__point-title ruled">Status you can see</h3>
+            <!-- VERIFY before launch -->
+            <p class="why-legalg__point-desc">SRN and current stage shared as it moves, without you having to chase it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FABRICATED DATA — must be replaced with real clients or removed before launch -->
+    <!-- 8. Client logos -->
+    <section class="clients">
+      <div class="container">
+        <p class="clients__label">Trusted by businesses across manufacturing, food, fintech and healthcare</p>
+        <ul class="clients__list">
+<!--BLOCK:clientLogos-->
+        </ul>
+      </div>
+    </section>
+
+    <!-- 9. Testimonials -->
+    <section class="testimonials">
+      <div class="container">
+        <p class="eyebrow">Client Feedback</p>
+        <h2 class="section-title">What clients say once the filing is done</h2>
+        <div class="carousel">
+          <div class="card-grid card-grid--3 carousel__track" id="testimonials-track">
+<!--BLOCK:testimonials-->
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 11. Final CTA band -->
+    <section class="final-cta surface-deep">
+      <div class="container final-cta__inner">
+        <h2 class="section-title">Not sure which filing applies to you?</h2>
+        <p class="final-cta__desc">Tell us what you're trying to do and we'll tell you the exact form and timeline, with a written quote before any payment.</p>
+        <div class="final-cta__actions">
+          <a href="#callback-form" class="btn btn--primary">Request a callback</a>
+          <a href="{{siteWhatsappHref}}" class="btn btn--secondary" target="_blank" rel="noopener">WhatsApp us</a>
+          <a href="tel:{{sitePhoneHref}}" class="final-cta__phone fig">{{sitePhone}}</a>
+        </div>
+        <p class="final-cta__hours">{{businessHoursLine}}</p>
+      </div>
+    </section>
+
+  </main>
+
+<!--PARTIAL:footer-->
+<script src="/assets/js/search.js" defer></script>
+<script src="/assets/js/forms.js" defer></script>
+<script src="/assets/js/accordion.js" defer></script>
+<script src="/assets/js/carousel.js" defer></script>
+<script src="/assets/js/reveal.js" defer></script>
+</body>
+</html>

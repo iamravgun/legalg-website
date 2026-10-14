@@ -1,0 +1,170 @@
+/* ==========================================================================
+   Header — utility strip, main bar, primary nav and desktop mega menu.
+   ========================================================================== */
+
+.container { max-width: var(--content-max); margin: 0 auto; padding: 0 var(--content-gutter); }
+
+/* The 3px green edge stays when the utility strip collapses on scroll (and
+   below 480px, where the strip is hidden), so the top frame survives. */
+.site-header { position: sticky; top: 0; z-index: var(--z-header); background: var(--white); border-top: 3px solid var(--green-800); }
+
+/* Utility strip collapses on scroll via max-height + opacity. */
+.utility-bar {
+  display: none;
+  background: var(--green-800);
+  max-height: 36px;
+  overflow: hidden;
+  transition: max-height var(--t-base) var(--ease-out), opacity var(--t-base) var(--ease-out);
+}
+@media (min-width: 480px) { .utility-bar { display: block; } }
+.site-header.is-scrolled .utility-bar { max-height: 0; opacity: 0; }
+
+.utility-bar__inner { height: 36px; display: flex; align-items: center; justify-content: space-between; gap: var(--space-24); }
+.utility-bar__contact,
+.utility-bar__links { display: flex; align-items: center; gap: var(--space-24); }
+.utility-bar__contact a { display: inline-flex; align-items: center; gap: var(--space-8); font-size: var(--text-13); color: var(--on-deep); transition: color var(--t-fast) var(--ease-out); }
+.utility-bar__contact .icon { color: var(--gold-400); }
+.utility-bar__contact a:hover span { text-decoration: underline; text-decoration-color: var(--gold-400); text-underline-offset: 3px; }
+.utility-bar__contact a:hover,
+.utility-bar__links a:hover { color: var(--gold-300); }
+.utility-bar__email { display: none; }
+@media (min-width: 1280px) { .utility-bar__email { display: inline-flex; } }
+.utility-bar__links a { font-size: var(--text-13); font-weight: var(--weight-medium); color: var(--on-deep); }
+
+.main-bar { height: 72px; border-bottom: var(--border-default); transition: box-shadow var(--t-base) var(--ease-out); }
+.site-header.is-scrolled .main-bar { box-shadow: var(--shadow-card); }
+.main-bar__inner { height: 72px; display: flex; align-items: center; gap: var(--space-24); }
+
+/* ---- Brand / wordmark ------------------------------------------------ */
+.brand { display: inline-flex; align-items: center; gap: var(--space-12); flex: none; }
+.brand__mark { display: block; border-radius: var(--radius-sm); }
+.brand__word { font-family: var(--font-serif); font-weight: var(--weight-bold); font-size: var(--text-20); color: var(--ink-900); white-space: nowrap; }
+.brand__g { color: var(--gold-700); }
+.brand--footer .brand__word { font-size: var(--text-18); }
+
+/* ---- Primary nav ----------------------------------------------------- */
+.primary-nav { flex: 1; display: none; justify-content: center; min-width: 0; }
+/* Six triggers, measured: 657px at 13px, 700px at 14px. With the mark,
+   "LegalG" and one button, 1024px leaves 733px (13px, 12px gaps) and the
+   1192px container leaves 917px (14px, 32px gaps). The full wordmark and a
+   second button do not fit beside six categories, so "Talk to an Expert"
+   lives in the utility strip. */
+.primary-nav__list { display: flex; align-items: center; gap: var(--space-12); }
+.primary-nav__item { flex: none; }
+.primary-nav__trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-4);
+  font-size: var(--text-13);
+  font-weight: var(--weight-medium);
+  color: var(--ink-900);
+  padding: var(--space-8) 0;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  transition: border-color var(--t-fast) var(--ease-out), color var(--t-fast) var(--ease-out);
+}
+.primary-nav__trigger:hover,
+.primary-nav__trigger[aria-expanded="true"] { border-bottom-color: var(--gold-600); }
+.primary-nav__chevron { flex: none; transition: transform var(--t-base) var(--ease-out); }
+.primary-nav__trigger[aria-expanded="true"] .primary-nav__chevron { transform: rotate(180deg); }
+
+.main-bar__actions { display: none; align-items: center; gap: var(--space-8); flex: none; }
+.main-bar__actions .btn--sm { padding: 0 var(--space-12); }
+
+.hamburger { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; margin-left: auto; color: var(--ink-900); }
+
+@media (min-width: 1024px) {
+  .primary-nav { display: flex; }
+  .main-bar__actions { display: inline-flex; }
+  .hamburger { display: none; }
+  .main-bar__inner { gap: var(--space-12); }
+}
+@media (min-width: 1280px) {
+  .primary-nav__list { gap: var(--space-32); }
+  .primary-nav__trigger { font-size: var(--text-14); }
+  .main-bar__actions { gap: var(--space-12); }
+  .main-bar__actions .btn--sm { padding: 0 var(--space-16); }
+  .main-bar__inner { gap: var(--space-24); }
+}
+
+/* ---- Mega menu: 4px drop-in on open --------------------------------------
+   Rail and panel each scroll internally; their max-height is tied to the
+   viewport so the menu (header + menu + footer strip) never runs off-screen
+   and no link is ever clipped out of reach. */
+.mega-menu {
+  --mega-max: min(440px, calc(100vh - 248px));
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background: var(--white);
+  border-top: var(--border-default);
+  border-bottom: var(--border-default);
+  box-shadow: var(--shadow-drop);
+  z-index: var(--z-mega-menu);
+}
+.mega-menu[hidden] { display: none; }
+.mega-menu:not([hidden]) { animation: mega-in var(--t-base) var(--ease-out); }
+@keyframes mega-in { from { opacity: 0; transform: translateY(-4px); } }
+
+.mega-menu__inner { display: flex; align-items: stretch; gap: var(--space-32); padding: var(--space-24) var(--content-gutter); }
+
+.mega-menu__rails { flex: none; width: 272px; border-right: var(--border-default); }
+.mega-menu__rail { max-height: var(--mega-max); overflow-y: auto; overscroll-behavior: contain; padding-right: var(--space-16); }
+.mega-menu__rail[hidden] { display: none; }
+.mega-menu__tablist { display: flex; flex-direction: column; gap: var(--space-2); }
+.mega-menu__tablist + .mega-menu__railsection { margin-top: var(--space-12); }
+.mega-menu__railsection {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  margin: 0;
+  padding: var(--space-8) var(--space-12);
+  background: var(--white);
+  border-bottom: var(--border-default);
+  font-size: var(--text-12);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--gold-800);
+}
+.mega-menu__railtab {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+  width: 100%;
+  text-align: left;
+  padding: var(--space-8) var(--space-12);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-14);
+  font-weight: var(--weight-medium);
+  color: var(--grey-900);
+  border-left: 2px solid transparent;
+  transition: background-color var(--t-fast) var(--ease-out);
+}
+.mega-menu__railtab:hover { background: var(--cream-50); }
+.mega-menu__railtab[aria-selected="true"] { background: var(--gold-100); border-left-color: var(--gold-600); color: var(--ink-900); font-weight: var(--weight-semibold); }
+.mega-menu__railcount { font-size: var(--text-13); color: var(--grey-600); }
+.mega-menu__railtab[aria-selected="true"] .mega-menu__railcount { color: var(--gold-800); }
+
+.mega-menu__panels { flex: 1; min-width: 0; max-height: var(--mega-max); overflow-y: auto; overscroll-behavior: contain; }
+.mega-menu__panel[hidden] { display: none; }
+.mega-menu__panel { column-count: 2; column-gap: var(--space-32); }
+@media (min-width: 1200px) { .mega-menu__panel { column-count: 3; } }
+.mega-menu__panel-list li { break-inside: avoid; }
+.mega-menu__panel-list a {
+  display: block;
+  font-size: var(--text-14);
+  color: var(--grey-900);
+  padding: var(--space-8);
+  border-radius: var(--radius-sm);
+  transition: background-color var(--t-fast) var(--ease-out), color var(--t-fast) var(--ease-out);
+}
+.mega-menu__panel-list a:hover,
+.mega-menu__panel-list a:focus-visible { background: var(--cream-50); color: var(--gold-800); }
+
+.mega-menu__footer { border-top: var(--border-default); background: var(--cream-50); }
+.mega-menu__footer-inner { display: flex; align-items: center; justify-content: space-between; gap: var(--space-16); padding: var(--space-12) var(--content-gutter); }
+.mega-menu__blurb { margin: 0; font-size: var(--text-13); color: var(--grey-600); max-width: 72ch; }
+.mega-menu__viewall { display: inline-flex; align-items: center; gap: var(--space-4); font-size: var(--text-13); font-weight: var(--weight-semibold); color: var(--gold-800); white-space: nowrap; }

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>{{pageTitle}}</title>
+  <meta name="description" content="{{metaDescription}}" />
+  <link rel="canonical" href="{{canonical}}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="LegalG Associates" />
+  <meta property="og:title" content="{{ogTitle}}" />
+  <meta property="og:description" content="{{metaDescription}}" />
+  <meta property="og:url" content="{{canonical}}" />
+  <meta name="twitter:card" content="summary" />
+<!--PARTIAL:head-->
+  <link rel="stylesheet" href="/assets/css/content.css" />
+  <link rel="stylesheet" href="/assets/css/service.css" />
+  <!--BLOCK:svcJsonLd-->
+</head>
+<body>
+<!--PARTIAL:header-->
+
+  <main id="main" class="svc">
+    <div class="container svc__grid">
+
+      <div class="svc__head">
+<!--BLOCK:svcBreadcrumbs-->
+<!--BLOCK:svcFilingRef-->
+        <h1 class="svc__title" style="view-transition-name: svc-{{slug}}">{{titleHtml}}</h1>
+<!--BLOCK:svcSpecStrip-->
+      </div>
+
+      <aside class="svc__aside" aria-label="Enquire about this service">
+        <div class="svc__aside-inner">
+          <div class="callback-card" id="enquiry">
+            <h2 class="callback-card__title">Speak to an advisor</h2>
+            <p class="callback-card__intro" data-form-intro>Tell us about your situation. An advisor calls back within one working day with a written quote before any payment.</p>
+            <!-- VERIFY callback turnaround before launch -->
+            <form class="callback-card__form" data-validate="service-enquiry" novalidate>
+              <input type="hidden" name="service" value="{{slug}}" />
+              <div class="field">
+                <label class="field__label" for="enq-name">Full name</label>
+                <input class="field__input" type="text" id="enq-name" name="name" autocomplete="name" data-rule="required" data-label="your full name" />
+              </div>
+              <div class="field">
+                <label class="field__label" for="enq-email">Email</label>
+                <input class="field__input" type="email" id="enq-email" name="email" autocomplete="email" data-rule="required email" data-label="your email address" />
+              </div>
+              <div class="field">
+                <label class="field__label" for="enq-phone">Phone number</label>
+                <input class="field__input" type="tel" id="enq-phone" name="phone" autocomplete="tel" inputmode="numeric" placeholder="10-digit mobile number" data-rule="required phone" data-label="your phone number" />
+              </div>
+              <div class="field">
+                <label class="field__label" for="enq-city">City</label>
+                <input class="field__input" type="text" id="enq-city" name="city" autocomplete="address-level2" data-rule="required" data-label="your city" />
+              </div>
+              <button type="submit" class="btn btn--primary btn--block"><span class="btn__label">Get started</span></button>
+              <p class="callback-card__privacy">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+                <span>We don't share your details. No obligation.</span>
+              </p>
+            </form>
+          </div>
+          <div class="svc__advisor">
+            <p class="svc__advisor-title">Talk to an advisor</p>
+            <p class="svc__advisor-line"><a href="tel:{{sitePhoneHref}}"><span class="fig">{{sitePhone}}</span></a></p>
+            <p class="svc__advisor-line"><a href="{{siteWhatsappHref}}" target="_blank" rel="noopener">WhatsApp us</a></p>
+            <p class="svc__advisor-hours">{{businessHoursLine}}</p>
+          </div>
+        </div>
+      </aside>
+
+      <div class="svc__body">
+<!--BLOCK:svcSections-->
+      </div>
+
+    </div>
+<!--BLOCK:svcRelated-->
+  </main>
+
+<!--PARTIAL:footer-->
+<script src="/assets/js/forms.js" defer></script>
+<script src="/assets/js/accordion.js" defer></script>
+<script src="/assets/js/reveal.js" defer></script>
+</body>
+</html>

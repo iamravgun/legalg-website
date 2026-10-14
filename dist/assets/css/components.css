@@ -1,0 +1,240 @@
+/* ==========================================================================
+   Components — reusable UI pieces, BEM-ish naming.
+   Motion tiers: micro-interactions use --t-fast, components --t-base.
+   ========================================================================== */
+
+.section-title { font-size: var(--text-30); margin: 0 0 var(--space-32); }
+
+/* ---- Buttons: visibly pressed on :active -------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  height: 44px;
+  padding: 0 var(--space-20);
+  font-size: var(--text-14);
+  font-weight: var(--weight-semibold);
+  border-radius: var(--radius-btn);
+  border: 1px solid transparent;
+  box-shadow: var(--shadow-card);
+  white-space: nowrap;
+  transition: background-color var(--t-fast) var(--ease-out), border-color var(--t-fast) var(--ease-out),
+    color var(--t-fast) var(--ease-out), transform var(--t-fast) var(--ease-out), box-shadow var(--t-fast) var(--ease-out);
+}
+.btn:active { transform: translateY(1px); box-shadow: none; }
+/* White on gold-600 is 3.20:1, so the label is ink (5.42:1). Hover lightens
+   to gold-400 (ink 8.47:1) — darkening to gold-700 would drop ink to 3.78:1. */
+.btn--primary { background: var(--gold-600); color: var(--ink-900); }
+.btn--primary:hover { background: var(--gold-400); color: var(--ink-900); }
+.btn--secondary { background: var(--white); border-color: var(--border); color: var(--ink-900); }
+.btn--secondary:hover { border-color: var(--ink-900); color: var(--ink-900); }
+/* On deep surfaces: primary keeps its gold-600 fill; secondary becomes a
+   gold-400 outline that fills green-700 on hover (off-white label, 6.30:1). */
+.surface-deep .btn--secondary { background: transparent; border-color: var(--gold-400); color: var(--gold-400); box-shadow: none; }
+.surface-deep .btn--secondary:hover { background: var(--green-700); border-color: var(--gold-300); color: var(--on-deep); }
+.btn--ghost { background: transparent; color: var(--ink-900); height: auto; padding: 0; box-shadow: none; }
+.btn--ghost:hover { color: var(--gold-800); }
+.btn--sm { height: 36px; padding: 0 var(--space-16); font-size: var(--text-13); }
+.btn--block { width: 100%; }
+.btn.is-loading { opacity: 0.7; cursor: progress; }
+
+/* ---- Chip — outline only; the site uses no coloured chip fills --------- */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-12);
+  border: var(--border-default);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-13);
+  font-weight: var(--weight-medium);
+  line-height: 1.2;
+  color: var(--grey-900);
+  background: var(--white);
+  transition: border-color var(--t-fast) var(--ease-out), color var(--t-fast) var(--ease-out);
+}
+a.chip:hover, button.chip:hover { border-color: var(--gold-600); color: var(--gold-800); }
+
+/* ---- Card: border shift + 1px lift, nothing else ------------------------ */
+.card-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-20); }
+@media (min-width: 768px) { .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1024px) { .card-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+.card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: var(--border-default);
+  border-radius: var(--radius-md);
+  padding: var(--space-24);
+  box-shadow: var(--shadow-card);
+  transition: border-color var(--t-fast) var(--ease-out), transform var(--t-fast) var(--ease-out);
+}
+.card:hover { border-color: var(--gold-600); transform: translateY(-1px); }
+/* 3px gold top edge: 0 → full width on hover, drawn from the left. */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: var(--gold-600);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--t-base) var(--ease-out);
+}
+.card:hover::before, .card:focus-visible::before { transform: scaleX(1); }
+.card__category {
+  font-size: var(--text-12);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--gold-800);
+  margin: 0 0 var(--space-8);
+}
+.card__title { font-size: var(--text-20); color: var(--ink-900); margin: 0 0 var(--space-8); line-height: 1.3; }
+.card__desc { font-size: var(--text-14); color: var(--grey-600); margin: 0 0 var(--space-16); flex: 1; }
+.card__meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-12);
+  padding-top: var(--space-16);
+  border-top: 1px solid var(--border-light);
+}
+.card__group { font-size: var(--text-13); color: var(--grey-600); }
+.card__turnaround { flex: none; font-size: var(--text-13); color: var(--grey-600); text-align: right; white-space: nowrap; }
+
+/* ---- Form field: border shift + 3px gold-100 ring ----------------------- */
+.field { display: flex; flex-direction: column; margin-bottom: var(--space-16); }
+.field__label { font-size: var(--text-13); font-weight: var(--weight-medium); color: var(--grey-900); margin-bottom: 6px; }
+.field__input,
+.field__select,
+.field__textarea {
+  height: 44px;
+  padding: 0 var(--space-12);
+  border: var(--border-default);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-16);
+  color: var(--grey-900);
+  background: var(--white);
+  transition: border-color var(--t-fast) var(--ease-out), box-shadow var(--t-fast) var(--ease-out);
+}
+.field__textarea { height: auto; min-height: 120px; padding: var(--space-12); resize: vertical; }
+.field__select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b6862' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; background-size: 16px; padding-right: var(--space-32); }
+.field__input:focus,
+.field__select:focus,
+.field__textarea:focus { border-color: var(--gold-600); box-shadow: 0 0 0 3px var(--gold-100); }
+.field__error { font-size: var(--text-13); color: var(--error); margin: 0; }
+/* Always rendered (it is a live region); spaced only when it has text. */
+.field__error:not(:empty) { margin-top: 6px; }
+.field--invalid .field__input,
+.field--invalid .field__select,
+.field--invalid .field__textarea { border-color: var(--error); }
+
+/* ---- Search box + results dropdown (homepage, 404, services.html) ----- */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  height: 56px;
+  padding: 0 var(--space-16);
+  border: var(--border-default);
+  border-radius: var(--radius-md);
+  background: var(--white);
+  transition: border-color var(--t-fast) var(--ease-out), box-shadow var(--t-fast) var(--ease-out);
+}
+.search-box:focus-within { border-color: var(--gold-600); box-shadow: 0 0 0 3px var(--gold-100); }
+.search-box__icon { flex: none; color: var(--grey-400); }
+.search-box__input { flex: 1; min-width: 0; border: none; outline: none; font-size: var(--text-16); color: var(--grey-900); background: transparent; height: 100%; }
+.search-box__input::placeholder { color: var(--grey-600); }
+.search-results {
+  position: absolute;
+  top: calc(100% + var(--space-4));
+  left: 0;
+  right: 0;
+  z-index: var(--z-dropdown);
+  background: var(--white);
+  border: var(--border-default);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-drop);
+  max-height: 360px;
+  overflow-y: auto;
+  padding: var(--space-8);
+  text-align: left;
+}
+.search-results[hidden] { display: none; }
+.search-results:not([hidden]) { animation: rise-in var(--t-fast) var(--ease-out); }
+.search-results__item a { display: flex; flex-direction: column; gap: 2px; padding: var(--space-8) var(--space-12); border-radius: var(--radius-sm); }
+.search-results__item.is-active a,
+.search-results__item a:hover { background: var(--cream-50); }
+.search-results__title { font-size: var(--text-14); color: var(--grey-900); font-weight: var(--weight-medium); }
+.search-results__title mark { background: var(--gold-100); color: var(--ink-900); border-radius: 2px; }
+.search-results__group { font-size: var(--text-13); color: var(--grey-600); }
+.search-results__empty { padding: var(--space-16) var(--space-12); font-size: var(--text-14); color: var(--grey-600); }
+@keyframes rise-in { from { opacity: 0; transform: translateY(4px); } }
+
+/* ---- Accordion — reads as a document, not a stack of boxes ------------
+   grid-template-rows 0fr → 1fr animates to the panel's natural height with no
+   measuring. Collapsing only applies once accordion.js adds .is-enhanced, so
+   every answer stays readable without JavaScript. */
+.accordion__item { position: relative; padding-left: var(--space-20); border-bottom: var(--border-default); }
+.accordion__item:first-child { border-top: var(--border-default); }
+.accordion__item::before {
+  content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+  background: var(--gold-600); transform: scaleY(0); transform-origin: top;
+  transition: transform var(--t-base) var(--ease-out);
+}
+.accordion__item.is-open::before { transform: scaleY(1); }
+.accordion__heading { margin: 0; font-size: inherit; }
+.accordion__trigger {
+  display: flex; align-items: center; justify-content: space-between; gap: var(--space-16);
+  width: 100%; padding: var(--space-20) 0; text-align: left;
+  font-family: var(--font-serif); font-size: var(--text-18); font-weight: var(--weight-semibold); line-height: 1.35;
+  color: var(--ink-900); transition: color var(--t-fast) var(--ease-out);
+}
+.accordion__trigger:hover, .accordion__item.is-open .accordion__trigger { color: var(--gold-800); }
+.accordion__chevron { flex: none; color: var(--gold-700); transition: transform var(--t-base) var(--ease-out); }
+.accordion__trigger[aria-expanded="true"] .accordion__chevron { transform: rotate(180deg); }
+.accordion__panel { display: grid; grid-template-rows: 1fr; }
+.accordion.is-enhanced .accordion__panel {
+  grid-template-rows: 0fr;
+  visibility: hidden;
+  transition: grid-template-rows var(--t-base) var(--ease-out), visibility 0s linear var(--t-base);
+}
+.accordion.is-enhanced .accordion__item.is-open .accordion__panel { grid-template-rows: 1fr; visibility: visible; transition-delay: 0s; }
+.accordion__panel > div { overflow: hidden; min-height: 0; }
+.accordion__panel p { margin: 0; padding: var(--space-4) var(--space-32) var(--space-24) 0; max-width: 62ch; font-size: var(--text-15); line-height: 1.7; color: var(--grey-600); }
+
+/* ---- Form success state (replaces the form, keeps the card) ------------ */
+.form-success__title { font-family: var(--font-serif); font-size: var(--text-20); font-weight: var(--weight-semibold); color: var(--ink-900); margin: 0 0 var(--space-8); }
+.form-success p:last-child { font-size: var(--text-14); color: var(--grey-600); margin: 0; }
+
+/* ---- Signature 3: the spec row — one layout for all label/value data -- */
+.spec-list { margin: 0; border-top: var(--border-default); }
+.spec-row {
+  display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-16);
+  padding: var(--space-16) 0; border-bottom: var(--border-default);
+}
+.spec-row__label { display: flex; align-items: center; gap: var(--space-8); font-size: var(--text-13); color: var(--grey-600); margin: 0; }
+.spec-row__label::before { content: ""; flex: none; width: 5px; height: 5px; background: var(--gold-600); }
+.spec-row__value { font-size: var(--text-15); color: var(--ink-900); margin: 0; text-align: right; }
+/* Narrow screens: label above value, so long values are not squeezed. */
+@media (max-width: 479px) {
+  .spec-row { flex-direction: column; gap: var(--space-4); }
+  .spec-row__value { text-align: left; }
+}
+
+/* ---- Signature 4: the filing reference line (service pages) ------------
+   Spec asked for grey-400; that measures 2.43:1 on white, so grey-600. */
+.filing-ref {
+  font-size: var(--text-12); font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-eyebrow); text-transform: uppercase;
+  color: var(--grey-600); margin: 0 0 var(--space-16);
+}
+
+/* ---- Scroll reveal — set up only by assets/js/reveal.js --------------- */
+[data-reveal].reveal-pending { opacity: 0; transform: translateY(12px); }
+[data-reveal].reveal-in { transition: opacity var(--t-slow) var(--ease-out), transform var(--t-slow) var(--ease-out); }

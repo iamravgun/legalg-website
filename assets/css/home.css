@@ -1,0 +1,173 @@
+/* ==========================================================================
+   Homepage, upper sections: hero, search, what we handle, who we work
+   with, FAQ. Lower sections are in home-lower.css. index.html only.
+   ========================================================================== */
+
+/* ---- 1. Hero — asymmetric 56/40: copy left, callback card right -------------------------------------- */
+.hero { padding: var(--space-48) 0 var(--space-56); }
+.hero__grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-40); align-items: center; }
+/* 56/42/32 — the one sanctioned exception to the 48px type-scale cap. */
+.hero__title {
+  font-size: 2rem;
+  font-weight: var(--weight-semibold);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  max-width: 15ch;
+  margin: 0 0 var(--space-20);
+}
+.hero__subline { font-size: var(--text-18); color: var(--grey-600); max-width: 52ch; margin: 0 0 var(--space-24); }
+.hero__points { display: grid; gap: var(--space-8); font-size: var(--text-14); color: var(--grey-600); margin-bottom: var(--space-32); }
+.hero__points li { display: flex; align-items: center; gap: var(--space-8); }
+.hero__points li::before { content: ""; flex: none; width: 6px; height: 6px; background: var(--gold-600); }
+.hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-12); }
+
+
+@media (min-width: 640px) {
+  /* Every item carries its left rule; the list is pulled 17px left and
+     clipped, so the rule at the start of ANY line (first or wrapped) hides. */
+  .hero__points { display: flex; flex-wrap: wrap; gap: var(--space-8) 0; margin-left: -17px; clip-path: inset(0 0 0 17px); }
+  .hero__points li { padding: 0 var(--space-16); border-left: var(--border-default); }
+}
+@media (min-width: 768px) { .hero__title { font-size: 2.625rem; } }
+/* Below 900px the card drops under the hero copy at full width. */
+@media (min-width: 900px) {
+  .hero__grid { grid-template-columns: minmax(0, 56fr) minmax(0, 40fr); gap: var(--space-64); }
+}
+@media (min-width: 1024px) {
+  .hero { padding: var(--space-72) 0 var(--space-80); }
+  .hero__title { font-size: 3.5rem; }
+}
+
+/* ---- 2. Search band — centred, so every element is held to 760px -------
+   Rhythm (exact): rule →10→ eyebrow →12→ H2 →8→ lede →28→ field →24→
+   label →12→ chips. */
+.finder { padding: var(--space-48) 0 var(--space-56); }
+.finder__inner { max-width: 760px; margin: 0 auto; text-align: center; }
+/* p carries a site-wide 68ch max-width; centre that box, not just its text. */
+.finder__inner > p { margin-left: auto; margin-right: auto; }
+.finder__eyebrow { margin-bottom: var(--space-12); }
+.finder__eyebrow::before { margin-bottom: 10px; }
+.finder__title { font-size: var(--text-24); line-height: 1.25; text-wrap: balance; margin: 0 0 var(--space-8); }
+.finder__lede { font-size: var(--text-15); color: var(--grey-600); max-width: 52ch; margin: 0 auto var(--space-28); }
+.finder__search { position: relative; max-width: 720px; margin: 0 auto; text-align: left; }
+/* Spec asked for grey-400; that is 2.44:1 on cream, so the label is grey-600. */
+.finder__popular-label {
+  margin: var(--space-24) 0 var(--space-12);
+  font-size: var(--text-12); font-weight: var(--weight-semibold);
+  letter-spacing: 0.06em; text-transform: uppercase; color: var(--grey-600);
+}
+.finder__chips { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-8); }
+.finder__chip {
+  display: inline-block;
+  padding: var(--space-8) 14px;
+  background: var(--white);
+  border: var(--border-default);
+  border-radius: var(--radius-btn);
+  font-size: var(--text-14);
+  color: var(--grey-900);
+  white-space: nowrap;
+  transition: border-color var(--t-fast) var(--ease-out), color var(--t-fast) var(--ease-out);
+}
+.finder__chip:hover { border-color: var(--gold-600); color: var(--gold-700); }
+
+/* Below 600px: one horizontal row that scrolls (touch, trackpad, and Tab —
+   focusing a chip scrolls it into view), never a tall stacked column. */
+@media (max-width: 599px) {
+  .finder__chips {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scroll-padding-inline: 16px;
+    margin-inline: calc(-1 * var(--content-gutter));
+    padding: 2px 16px 4px; /* room for the focus ring */
+    scrollbar-width: none;
+  }
+  .finder__chips::-webkit-scrollbar { display: none; }
+  .finder__chips li { flex: none; scroll-snap-align: start; }
+}
+@media (min-width: 1024px) {
+  .finder { padding: var(--space-80) 0 88px; }
+  .finder__title { font-size: var(--text-30); }
+}
+
+/* ---- 3. What we handle — 34/66, white panels on cream ------------------ */
+.handle { padding: var(--space-56) 0; }
+.handle__grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-40); align-items: start; }
+.handle__title { font-size: var(--text-30); margin: 0 0 var(--space-20); }
+.handle__desc { font-size: var(--text-15); color: var(--grey-600); max-width: 48ch; }
+.handle__counts { font-family: var(--font-serif); font-variant-numeric: tabular-nums lining-nums; font-size: var(--text-15); color: var(--ink-900); margin: var(--space-24) 0; }
+.handle__actions { display: flex; flex-wrap: wrap; gap: var(--space-12); }
+.handle__panels { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-20); }
+
+.panel {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: var(--border-default);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-24);
+  transition: border-color var(--t-fast) var(--ease-out), transform var(--t-fast) var(--ease-out);
+}
+.panel::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 3px; background: var(--gold-600); transform: scaleX(0); transform-origin: left; transition: transform var(--t-base) var(--ease-out); }
+.panel:hover, .panel:focus-within { border-color: var(--gold-600); transform: translateY(-1px); }
+.panel:hover::before, .panel:focus-within::before { transform: scaleX(1); }
+.panel__icon { display: block; color: var(--gold-600); margin-bottom: var(--space-16); }
+.panel__title { font-size: var(--text-20); margin: 0 0 var(--space-4); }
+.panel__title a { color: var(--ink-900); }
+.panel__count { font-size: var(--text-13); color: var(--grey-600); margin: 0 0 var(--space-12); }
+.panel__desc { font-size: var(--text-14); color: var(--grey-600); margin: 0 0 var(--space-16); }
+.panel__list { display: grid; gap: var(--space-8); padding-top: var(--space-16); margin-bottom: var(--space-16); border-top: 1px solid var(--border-light); font-size: var(--text-14); }
+.panel__list a { color: var(--grey-900); }
+/* Brass text on WHITE panels: gold-700 passes here (4.60:1), not on cream. */
+.panel a:hover, .panel__all { color: var(--gold-700); }
+.panel__all { margin-top: auto; font-size: var(--text-13); align-self: flex-start; }
+
+/* Two panel columns wherever a panel gets ~300px of text: 640–1023 (intro
+   stacked above) and 1200+. At 1024–1199 the 66% column is too narrow for
+   two-line descriptions, so panels stack. */
+@media (min-width: 640px) { .handle__panels { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1024px) {
+  .handle { padding: var(--space-96) 0; }
+  .handle__grid { grid-template-columns: minmax(0, 34fr) minmax(0, 66fr); gap: var(--space-64); }
+  .handle__intro { position: sticky; top: 128px; }
+  .handle__panels { grid-template-columns: minmax(0, 1fr); }
+}
+@media (min-width: 1200px) { .handle__panels { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* ---- 3. Who we work with — 35/65 --------------------------------------- */
+.who-we-work-with { padding: var(--space-56) 0; }
+.who-we-work-with__grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-32); }
+.who-we-work-with__title { max-width: 18ch; }
+.who-we-work-with__desc { font-size: var(--text-14); color: var(--grey-600); max-width: 46ch; margin: 0; }
+.segment { padding: var(--space-24) 0; border-bottom: var(--border-default); }
+.segment:first-child { padding-top: 0; }
+.segment__name { font-size: var(--text-18); margin: 0 0 var(--space-4); }
+.segment__desc { font-size: var(--text-14); color: var(--grey-600); margin: 0 0 var(--space-12); }
+.segment__links { font-size: var(--text-13); margin: 0; }
+.segment__links a { color: var(--grey-900); }
+.segment__sep { color: var(--grey-400); margin: 0 var(--space-4); }
+
+/* ---- 4. Before you hand over a filing — 34/66, matching "What we handle" */
+.faq { padding: var(--space-56) 0; }
+.faq__grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-40); align-items: start; }
+.faq__title { font-size: var(--text-30); margin: 0 0 var(--space-20); }
+.faq__desc { font-size: var(--text-15); color: var(--grey-600); max-width: 44ch; }
+.faq__nudge { margin-top: var(--space-24); padding-top: var(--space-24); border-top: 1px solid var(--border-light); }
+.faq__nudge-title { font-size: var(--text-15); font-weight: var(--weight-semibold); color: var(--ink-900); margin: 0 0 var(--space-4); }
+.faq__nudge-desc { font-size: var(--text-14); color: var(--grey-600); margin: 0 0 var(--space-8); }
+.faq__nudge-links { font-size: var(--text-14); font-weight: var(--weight-semibold); margin: 0; }
+.faq__nudge-links span[aria-hidden] { color: var(--grey-400); margin: 0 var(--space-8); }
+@media (min-width: 1024px) {
+  .faq { padding: var(--space-96) 0; }
+  .faq__grid { grid-template-columns: minmax(0, 34fr) minmax(0, 66fr); gap: var(--space-64); }
+  .faq__intro { position: sticky; top: 128px; }
+}
+
+.featured-services__header { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: var(--space-16); margin-bottom: var(--space-24); }
+.featured-services__header .section-title { margin-bottom: 0; }
+

@@ -1,0 +1,506 @@
+slug,category,words,verify
+pvt-ltd-company-registration,"Company Setup",669,11
+opc-registration,"Company Setup",603,7
+llp-registration,"Company Setup",583,8
+partnership-firm-registration,"Company Setup",558,1
+sole-proprietorship-registration,"Company Setup",469,1
+section-8-company-registration,"Company Setup",566,8
+producer-company-registration,"Company Setup",586,2
+nidhi-company-registration,"Company Setup",587,2
+public-limited-company-registration,"Company Setup",631,2
+indian-subsidiary-registration,"Company Setup",541,1
+startup-india-dpiit-recognition,"Company Setup",543,6
+udyam-msme-registration,"Company Setup",544,4
+cooperative-society-registration,"Company Setup",549,2
+multi-state-cooperative-society-registration,"Company Setup",506,3
+farmer-producer-organization-fpo-registration,"Company Setup",521,1
+warehouse-wdra-registration,"Company Setup",551,2
+renewable-energy-project-company-registration,"Company Setup",637,0
+microfinance-institution-registration,"Company Setup",537,1
+real-estate-developer-entity-structuring,"Company Setup",482,0
+joint-venture-agreement-and-structuring,"Company Setup",518,0
+insurance-marketing-firm-registration,"Company Setup",579,1
+payment-bank-registration-advisory,"Company Setup",468,2
+usa-delaware-c-corp-registration,"Company Setup",555,3
+usa-delaware-llc-registration,"Company Setup",599,3
+usa-wyoming-llc-registration,"Company Setup",563,3
+usa-nevada-llc-registration,"Company Setup",558,3
+usa-california-c-corp-registration,"Company Setup",511,3
+usa-federal-ein-application,"Company Setup",524,4
+usa-registered-agent-service,"Company Setup",540,2
+usa-foreign-qualification-filing,"Company Setup",543,3
+uk-limited-company-registration,"Company Setup",579,4
+uk-llp-registration,"Company Setup",532,3
+uk-companies-house-annual-filing,"Company Setup",571,5
+uk-vat-registration,"Company Setup",524,3
+uk-confirmation-statement-filing,"Company Setup",532,4
+singapore-pte-ltd-registration,"Company Setup",596,4
+singapore-gst-registration,"Company Setup",564,4
+singapore-employment-pass-advisory,"Company Setup",487,3
+hong-kong-private-limited-company-registration,"Company Setup",514,3
+hong-kong-offshore-bank-account-assistance,"Company Setup",522,2
+uae-mainland-company-registration,"Company Setup",649,4
+uae-free-zone-company-registration-dmcc,"Company Setup",624,4
+uae-free-zone-company-registration-ifza,"Company Setup",539,3
+uae-offshore-company-registration,"Company Setup",565,4
+uae-corporate-tax-registration,"Company Setup",549,5
+netherlands-bv-registration,"Company Setup",552,3
+germany-gmbh-registration,"Company Setup",533,4
+ireland-company-registration,"Company Setup",606,3
+switzerland-gmbh-registration,"Company Setup",519,2
+france-sarl-registration,"Company Setup",585,3
+poland-sp-z-oo-registration,"Company Setup",574,5
+cayman-islands-company-registration,"Company Setup",568,2
+british-virgin-islands-bvi-company-registration,"Company Setup",613,4
+mauritius-gbc-company-registration,"Company Setup",555,3
+seychelles-offshore-company-registration,"Company Setup",541,4
+panama-company-registration,"Company Setup",507,4
+australia-pty-ltd-registration,"Company Setup",555,4
+new-zealand-company-registration,"Company Setup",561,4
+japan-kabushiki-kaisha-kk-registration,"Company Setup",603,4
+china-wfoe-registration,"Company Setup",549,4
+indonesia-pt-pma-registration,"Company Setup",527,3
+vietnam-foreign-company-registration,"Company Setup",564,4
+saudi-arabia-company-registration,"Company Setup",572,3
+qatar-company-registration,"Company Setup",573,3
+oman-company-registration,"Company Setup",579,3
+bahrain-company-registration,"Company Setup",606,4
+nepal-company-registration,"Company Setup",596,4
+bangladesh-company-registration,"Company Setup",514,3
+sri-lanka-company-registration,"Company Setup",512,4
+canada-company-registration,"Company Setup",594,3
+south-africa-company-registration,"Company Setup",572,3
+israel-company-registration,"Company Setup",587,4
+foreign-company-branch-office-registration-india,"Company Setup",606,5
+foreign-company-liaison-office-registration-india,"Company Setup",620,4
+overseas-investment-odi-filing,"Company Setup",542,3
+proprietorship-to-private-limited-conversion,"Company Setup",545,3
+partnership-to-llp-conversion,"Company Setup",534,2
+llp-to-private-limited-conversion,"Company Setup",496,3
+private-limited-to-public-limited-conversion,"Company Setup",497,3
+one-person-company-to-private-limited-conversion,"Company Setup",502,3
+change-in-registered-office-address,"Company Setup",588,3
+change-of-company-name,"Company Setup",505,1
+addition-or-removal-of-director,"Company Setup",553,3
+change-in-llp-partners,"Company Setup",558,3
+digital-signature-certificate-dsc,"Company Setup",551,2
+director-identification-number-din,"Company Setup",511,2
+shop-and-establishment-registration,"Company Setup",484,2
+professional-tax-registration,"Company Setup",527,2
+trade-license-registration,"Company Setup",517,2
+epfo-registration,"Company Setup",505,2
+esic-registration,"Company Setup",439,2
+fast-track-exit-strike-off-private-limited,"Company Setup",670,8
+llp-strike-off,"Company Setup",593,4
+voluntary-winding-up-of-company,"Company Setup",604,5
+nidhi-company-winding-up,"Company Setup",632,5
+section-8-company-closure,"Company Setup",499,4
+dormant-company-status-application,"Company Setup",516,4
+insolvency-resolution-advisory,"Company Setup",548,5
+trust-registration,"Company Setup",542,6
+society-registration,"Company Setup",561,6
+ngo-darpan-registration,"Company Setup",580,7
+12a-registration,"Company Setup",516,7
+80g-registration,"Company Setup",607,6
+fcra-registration,"Company Setup",538,7
+csr-1-filing,"Company Setup",522,8
+startup-india-seed-fund-scheme-application,"Company Setup",444,1
+stand-up-india-scheme-registration,"Company Setup",453,3
+pmegp-loan-scheme-application,"Company Setup",430,4
+cgtmse-collateral-free-loan-registration,"Company Setup",475,3
+zed-certification-zero-defect-zero-effect,"Company Setup",422,3
+district-industries-centre-dic-registration,"Company Setup",500,3
+virtual-office-for-gst-registration,"Company Setup",551,1
+virtual-office-for-company-registration,"Company Setup",540,1
+registered-agent-and-compliance-address-service,"Company Setup",523,1
+business-correspondence-mailroom-service,"Company Setup",561,1
+liquor-license,"Company Setup",539,2
+drug-license,"Company Setup",501,2
+money-lending-license,"Company Setup",478,1
+chit-fund-registration,"Company Setup",463,1
+travel-agency-license-iatagovernment,"Company Setup",488,1
+placement-agency-license,"Company Setup",442,1
+private-security-agency-license-psara,"Company Setup",449,1
+gas-agency-dealership-registration,"Company Setup",417,1
+petrol-pump-license-advisory,"Company Setup",463,1
+lpg-distributorship-registration,"Company Setup",418,1
+virtual-cfo-services,"Company Setup",574,0
+compliance-calendar-management-retainer,"Company Setup",517,0
+outsourced-company-secretary-services,"Company Setup",563,1
+outsourced-accounting-services,"Company Setup",552,0
+payroll-outsourcing-services,"Company Setup",591,0
+statutory-compliance-audit-retainer,"Company Setup",476,0
+legal-retainer-for-startups,"Company Setup",493,0
+current-account-opening-assistance-india,"Company Setup",506,0
+foreign-currency-account-assistance,"Company Setup",544,1
+payment-gateway-integration-advisory,"Company Setup",441,1
+merchant-onboarding-advisory-razorpaystripe,"Company Setup",466,0
+escrow-account-setup-advisory,"Company Setup",470,0
+corporate-credit-card-setup-advisory,"Company Setup",462,0
+gst-registration,"GST & Tax",579,8
+gst-registration-for-e-commerce-sellers,"GST & Tax",521,7
+gst-registration-for-non-resident-taxable-person,"GST & Tax",553,7
+gst-registration-for-casual-taxable-person,"GST & Tax",572,6
+gst-registration-cancellation,"GST & Tax",540,8
+gst-registration-revocation,"GST & Tax",482,7
+gstin-core-field-amendment,"GST & Tax",501,8
+gstr-1-filing,"GST & Tax",537,9
+gstr-3b-filing,"GST & Tax",577,10
+gst-return-filing,"GST & Tax",608,14
+gstr-4-filing-composition-scheme,"GST & Tax",538,6
+gstr-9-annual-return-filing,"GST & Tax",619,17
+gstr-9c-reconciliation-statement,"GST & Tax",560,10
+gst-nil-return-filing,"GST & Tax",507,8
+gst-lut-filing-letter-of-undertaking,"GST & Tax",478,6
+gst-itc-04-filing-job-work,"GST & Tax",534,10
+qrmp-scheme-return-filing,"GST & Tax",522,5
+gst-audit,"GST & Tax",521,6
+gst-show-cause-notice-reply,"GST & Tax",502,6
+gst-appeal-filing-appellate-authority,"GST & Tax",557,6
+gst-refund-application,"GST & Tax",533,6
+gst-health-check-up-review,"GST & Tax",481,5
+input-tax-credit-reconciliation,"GST & Tax",491,6
+anti-profiteering-compliance-advisory,"GST & Tax",497,6
+gst-for-sez-units,"GST & Tax",486,6
+gst-on-cross-border-digital-services-oidar,"GST & Tax",462,6
+reverse-charge-mechanism-advisory,"GST & Tax",522,6
+gst-tdstcs-compliance-e-commerce-operators,"GST & Tax",484,8
+gst-audit-for-composition-dealers,"GST & Tax",528,6
+gst-impact-assessment-study,"GST & Tax",463,4
+income-tax-return-filing-individual,"GST & Tax",542,6
+income-tax-return-filing,"GST & Tax",624,14
+tax-audit-under-section-44ab,"GST & Tax",477,5
+tds-return-filing,"GST & Tax",606,8
+tcs-return-filing,"GST & Tax",539,5
+advance-tax-computation-and-payment,"GST & Tax",441,5
+form-15ca15cb-filing,"GST & Tax",525,7
+income-tax-notice-reply,"GST & Tax",578,1
+income-tax-appeal-filing-cit-a,"GST & Tax",495,5
+pan-card-application,"GST & Tax",488,4
+tan-application,"GST & Tax",486,4
+lowernil-tds-deduction-certificate,"GST & Tax",549,5
+form-26as-ais-reconciliation,"GST & Tax",480,5
+income-tax-refund-follow-up,"GST & Tax",561,4
+assessment-proceedings-representation,"GST & Tax",526,4
+income-tax-clearance-certificate,"GST & Tax",489,4
+form-1616a-issuance-advisory,"GST & Tax",519,5
+roc-annual-compliance,"GST & Tax",633,13
+llp-annual-filing-form-8-and-form-11,"GST & Tax",530,5
+dir-3-kyc-filing,"GST & Tax",448,4
+dpt-3-filing-return-of-deposits,"GST & Tax",476,7
+msme-form-1-filing,"GST & Tax",423,6
+annual-general-meeting-compliance,"GST & Tax",496,4
+board-meeting-and-minutes-compliance,"GST & Tax",473,5
+statutory-audit-coordination,"GST & Tax",421,3
+secretarial-audit-form-mr-3,"GST & Tax",498,5
+xbrl-filing,"GST & Tax",439,5
+charge-creationsatisfaction-chg-1chg-4-filing,"GST & Tax",488,4
+registered-office-change-intimation-inc-22,"GST & Tax",475,6
+pf-epfo-return-filing,"GST & Tax",503,4
+esic-return-filing,"GST & Tax",481,4
+professional-tax-return-filing,"GST & Tax",442,4
+payroll-processing-and-compliance,"GST & Tax",487,3
+gratuity-compliance-advisory,"GST & Tax",447,4
+labour-welfare-fund-compliance,"GST & Tax",487,4
+bonus-act-compliance,"GST & Tax",466,4
+dtaa-advisory,"GST & Tax",463,5
+transfer-pricing-study-and-documentation,"GST & Tax",454,5
+form-10f-filing,"GST & Tax",439,7
+tax-residency-certificate,"GST & Tax",516,5
+nri-taxation-services,"GST & Tax",482,5
+equalisation-levy-compliance,"GST & Tax",516,5
+fema-advisory-for-nri-remittances,"GST & Tax",499,5
+foreign-remittance-tax-compliance-15ca-cb,"GST & Tax",540,7
+customs-duty-advisory,"GST & Tax",471,4
+bill-of-entry-filing,"GST & Tax",458,5
+shipping-bill-filing,"GST & Tax",558,6
+duty-drawback-claim,"GST & Tax",503,5
+advance-authorization-scheme-filing,"GST & Tax",509,5
+epcg-scheme-registration,"GST & Tax",531,5
+sez-unit-compliance-advisory,"GST & Tax",487,5
+customs-bonded-warehouse-license,"GST & Tax",488,5
+corporate-tax-planning,"GST & Tax",498,3
+startup-tax-structuring,"GST & Tax",478,2
+esop-taxation-advisory,"GST & Tax",479,3
+capital-gains-tax-advisory,"GST & Tax",451,3
+succession-and-wealth-tax-planning,"GST & Tax",438,2
+tax-due-diligence,"GST & Tax",443,2
+hni-tax-residency-planning,"GST & Tax",479,3
+stamp-duty-advisory,"GST & Tax",479,3
+property-tax-compliance-advisory,"GST & Tax",476,3
+entertainment-tax-registration,"GST & Tax",489,3
+state-excise-duty-compliance,"GST & Tax",458,3
+municipal-trade-license-renewal,"GST & Tax",512,3
+local-body-tax-advisory,"GST & Tax",504,3
+profession-tax-enrollment-for-employers,"GST & Tax",539,3
+equalisation-levy-registration,"GST & Tax",475,3
+software-technology-parks-stpi-registration,"GST & Tax",496,3
+eou-export-oriented-unit-registration,"GST & Tax",544,3
+sez-unit-registration,"GST & Tax",472,3
+free-trade-warehousing-zone-registration,"GST & Tax",483,3
+customs-broker-license,"GST & Tax",456,3
+e-commerce-seller-tax-compliance,"GST & Tax",494,3
+freelancer-and-gig-worker-tax-advisory,"GST & Tax",439,3
+real-estate-sector-gst-advisory,"GST & Tax",407,3
+works-contract-gst-advisory,"GST & Tax",426,3
+restaurant-and-hospitality-gst-advisory,"GST & Tax",410,3
+healthcare-sector-tax-exemption-advisory,"GST & Tax",405,3
+educational-institution-tax-exemption-12aa,"GST & Tax",490,3
+itites-sector-tax-advisory,"GST & Tax",476,3
+trademark-registration,"Trademark & IP",660,10
+trademark-search-and-clearance,"Trademark & IP",474,5
+trademark-objection-reply,"Trademark & IP",491,6
+trademark-opposition-filing,"Trademark & IP",474,1
+trademark-hearing-representation,"Trademark & IP",484,5
+trademark-renewal,"Trademark & IP",471,4
+trademark-assignment,"Trademark & IP",463,5
+trademark-licensing-agreement,"Trademark & IP",460,4
+trademark-watch-service,"Trademark & IP",513,4
+trademark-infringement-suit-advisory,"Trademark & IP",450,5
+well-known-trademark-application,"Trademark & IP",531,5
+madrid-protocol-international-trademark-filing,"Trademark & IP",528,4
+us-trademark-registration,"Trademark & IP",493,3
+uk-trademark-registration,"Trademark & IP",538,4
+eu-trademark-registration-euipo,"Trademark & IP",510,4
+uae-trademark-registration,"Trademark & IP",493,3
+geographical-indication-gi-registration,"Trademark & IP",539,3
+plant-variety-protection-registration,"Trademark & IP",527,3
+semiconductor-layout-design-registration,"Trademark & IP",532,3
+trade-secret-protection-advisory,"Trademark & IP",503,3
+traditional-knowledge-digital-library-advisory,"Trademark & IP",485,3
+integrated-gi-registration-for-agricultural-products,"Trademark & IP",542,3
+copyright-registration,"Trademark & IP",556,5
+copyright-registration-literary-work,"Trademark & IP",516,3
+copyright-registration-softwaresource-code,"Trademark & IP",444,3
+copyright-registration-artistic-work,"Trademark & IP",492,2
+copyright-registration-music-and-sound-recording,"Trademark & IP",495,2
+copyright-assignment-agreement,"Trademark & IP",442,3
+copyright-infringement-notice,"Trademark & IP",488,3
+patent-filing-provisional,"Trademark & IP",571,9
+complete-patent-specification-filing,"Trademark & IP",485,4
+patentability-search,"Trademark & IP",405,3
+pct-international-patent-filing,"Trademark & IP",459,4
+patent-examination-response,"Trademark & IP",458,4
+patent-renewal-annuity-filing,"Trademark & IP",442,4
+patent-infringement-advisory,"Trademark & IP",394,3
+patent-opposition-pre-grantpost-grant,"Trademark & IP",435,4
+patent-working-statement-form-27-filing,"Trademark & IP",478,6
+industrial-design-registration,"Trademark & IP",497,2
+design-registration-renewal,"Trademark & IP",377,3
+cease-and-desist-notice,"Trademark & IP",479,1
+ip-infringement-suit-filing,"Trademark & IP",489,3
+customs-ip-recordal-anti-counterfeiting,"Trademark & IP",455,2
+domain-name-dispute-resolution-indrpudrp,"Trademark & IP",415,1
+ip-due-diligence,"Trademark & IP",451,2
+ip-portfolio-audit,"Trademark & IP",431,1
+trademark-portfolio-management,"Trademark & IP",469,1
+ip-licensing-strategy-advisory,"Trademark & IP",402,1
+franchise-ip-structuring,"Trademark & IP",450,1
+technology-transfer-agreement,"Trademark & IP",454,2
+ip-valuation,"Trademark & IP",421,1
+start-up-ip-audit,"Trademark & IP",428,1
+patent-portfolio-management,"Trademark & IP",442,1
+domain-name-registration-advisory,"Trademark & IP",430,1
+website-terms-and-ip-compliance-audit,"Trademark & IP",427,1
+app-store-ip-compliance-advisory,"Trademark & IP",430,1
+software-licensing-agreement-drafting,"Trademark & IP",443,1
+open-source-compliance-audit,"Trademark & IP",427,1
+franchise-disclosure-document-drafting,"Trademark & IP",496,2
+brand-licensing-advisory,"Trademark & IP",466,1
+merchandising-rights-agreement,"Trademark & IP",415,1
+co-branding-agreement-drafting,"Trademark & IP",477,1
+ip-assignment-for-m-and-a,"Trademark & IP",450,1
+ai-generated-work-copyright-advisory,"Trademark & IP",410,2
+blockchainnft-ip-advisory,"Trademark & IP",489,1
+data-and-database-rights-protection,"Trademark & IP",498,2
+trade-dress-protection-advisory,"Trademark & IP",457,1
+personality-rights-protection-advisory,"Trademark & IP",450,2
+iso-9001-quality-management-system-certification,"ISO Certifications",512,2
+iso-14001-environmental-management-system-certification,"ISO Certifications",556,4
+iso-45001-occupational-health-and-safety-certification,"ISO Certifications",561,4
+iso-50001-energy-management-system-certification,"ISO Certifications",476,3
+iso-27001-information-security-management-certification,"ISO Certifications",543,4
+iso-20000-1-it-service-management-certification,"ISO Certifications",430,3
+iso-22301-business-continuity-management-certification,"ISO Certifications",460,3
+iso-22000-food-safety-management-certification,"ISO Certifications",502,2
+iso-13485-medical-devices-quality-management-certification,"ISO Certifications",495,3
+isoiec-17025-testing-and-calibration-laboratory-accreditation,"ISO Certifications",475,3
+haccp-certification,"ISO Certifications",519,2
+gmp-good-manufacturing-practice-certification,"ISO Certifications",495,3
+iso-37001-anti-bribery-management-system-certification,"ISO Certifications",489,3
+iso-31000-risk-management-certification,"ISO Certifications",432,3
+iso-26000-social-responsibility-certification,"ISO Certifications",447,4
+iec-registration,"Licensing",537,3
+dgft-advance-authorization,"Licensing",520,4
+aeo-authorized-economic-operator-certification,"Licensing",515,3
+legal-metrology-registration,"Licensing",490,3
+bis-hallmarking-license-jewellery,"Licensing",514,3
+rcmc-registration-registration-cum-membership-certificate,"Licensing",496,4
+fssai-license-registration,"Licensing",592,10
+fssai-basic-registration,"Licensing",483,3
+fssai-state-license,"Licensing",486,3
+fssai-central-license,"Licensing",506,3
+fssai-license-renewal,"Licensing",587,3
+fssai-license-modification,"Licensing",443,3
+bis-certification,"Licensing",608,1
+bis-crs-registration-electronics-and-it-goods,"Licensing",496,4
+bis-foreign-manufacturers-certification-scheme-fmcs,"Licensing",518,4
+bis-hallmark-registration-goldsilver,"Licensing",444,4
+legal-metrology-packaged-commodities-registration,"Licensing",522,4
+ce-marking-advisory-export,"Licensing",479,4
+wpc-equipment-type-approval-eta,"Licensing",507,4
+sacfa-clearance-telecom-towers,"Licensing",513,4
+cdsco-medical-device-registration,"Licensing",569,1
+cdsco-medical-device-registration-class-ab,"Licensing",531,3
+cdsco-medical-device-registration-class-cd,"Licensing",478,3
+drug-manufacturing-license,"Licensing",517,3
+drug-wholesale-license,"Licensing",526,3
+drug-retail-pharmacy-license,"Licensing",455,3
+cosmetic-product-registration-cdsco,"Licensing",456,3
+ayush-manufacturing-license,"Licensing",490,3
+clinical-trial-registration-cdsco,"Licensing",452,3
+clinical-establishment-registration,"Licensing",529,3
+nursing-home-license,"Licensing",446,3
+diagnostic-centre-license,"Licensing",468,3
+blood-bank-license,"Licensing",512,3
+medical-council-registration-advisory,"Licensing",446,3
+telemedicine-practice-compliance,"Licensing",477,3
+ayush-clinic-registration,"Licensing",464,3
+nbfc-registration-advisory,"Licensing",599,6
+nbfc-p2p-lending-registration,"Licensing",530,4
+payment-aggregator-authorization-rbi,"Licensing",486,3
+prepaid-payment-instrument-ppi-license,"Licensing",541,5
+money-changer-license-authorized-dealer,"Licensing",504,4
+nidhi-company-rbi-compliance-advisory,"Licensing",447,4
+housing-finance-company-registration,"Licensing",482,4
+account-aggregator-nbfc-aa-registration,"Licensing",491,4
+cross-border-payment-aggregator-authorization-pa-cb,"Licensing",487,4
+sebi-investment-adviser-registration,"Licensing",588,5
+sebi-research-analyst-registration,"Licensing",438,3
+sebi-portfolio-manager-registration,"Licensing",403,3
+sebi-stock-broker-registration,"Licensing",473,3
+alternative-investment-fund-aif-registration,"Licensing",453,3
+merchant-banker-registration,"Licensing",463,3
+mutual-fund-distributor-amfi-registration,"Licensing",472,3
+credit-rating-agency-registration,"Licensing",423,3
+debenture-trustee-registration,"Licensing",421,3
+irdai-insurance-broker-license,"Licensing",444,3
+irdai-corporate-agent-registration,"Licensing",467,3
+telecom-osp-registration-dot,"Licensing",390,3
+isp-license-internet-service-provider,"Licensing",450,3
+vno-license-virtual-network-operator,"Licensing",430,3
+dthbroadcasting-license-advisory,"Licensing",378,3
+third-party-administrator-tpa-license,"Licensing",398,3
+surveyor-and-loss-assessor-license,"Licensing",472,3
+fire-safety-noc-license,"Licensing",518,3
+factory-license-factories-act,"Licensing",517,3
+real-estate-project-registration-rera,"Licensing",527,4
+real-estate-agent-registration-rera,"Licensing",501,3
+weights-and-measures-dealer-license,"Licensing",486,3
+halal-certification,"Licensing",497,3
+organic-certification-npop,"Licensing",467,3
+agmark-certification,"Licensing",477,3
+kosher-certification,"Licensing",441,2
+star-rating-certification-bee-for-appliances,"Licensing",501,3
+textile-committee-registration,"Licensing",474,3
+jute-packaging-compliance,"Licensing",457,3
+coffee-board-registration,"Licensing",531,3
+tea-board-registration,"Licensing",509,3
+spices-board-registration,"Licensing",481,3
+apeda-registration-agricultural-exports,"Licensing",501,3
+school-recognition-and-affiliation-advisory,"Licensing",359,3
+universitycollege-approval-advisory-ugcaicte,"Licensing",407,3
+coaching-institute-registration,"Licensing",429,3
+vocational-training-centre-registration-nsdc,"Licensing",449,3
+online-education-platform-compliance,"Licensing",378,3
+skill-development-council-registration,"Licensing",420,3
+transport-permit-nationalstate,"Licensing",397,3
+warehouse-license,"Licensing",421,3
+cold-storage-license,"Licensing",461,3
+courier-service-license,"Licensing",396,3
+logistics-aggregator-compliance,"Licensing",415,2
+fleet-operator-registration,"Licensing",440,3
+goods-carriage-permit,"Licensing",496,3
+cpcbspcb-consent-to-establish,"Licensing",453,4
+pollution-control-consent-to-operate,"Licensing",595,2
+pollution-control-board-noc-consent,"Licensing",464,4
+environmental-clearance-eia,"Licensing",474,4
+hazardous-waste-authorization,"Licensing",477,4
+bio-medical-waste-authorization,"Licensing",484,4
+e-waste-authorization,"Licensing",481,4
+water-cess-compliance,"Licensing",477,4
+noise-pollution-noc,"Licensing",522,4
+forest-clearance-advisory,"Licensing",447,4
+epr-registration-plastic-waste,"Licensing",548,2
+epr-registration-e-waste,"Licensing",462,3
+epr-registration-battery-waste,"Licensing",413,3
+epr-registration-tyre-waste,"Licensing",490,3
+epr-registration-used-oil,"Licensing",441,3
+epr-annual-return-filing,"Licensing",432,3
+esg-reporting-advisory,"Licensing",427,2
+brsr-business-responsibility-and-sustainability-report-compliance,"Licensing",433,3
+carbon-credit-registration-advisory,"Licensing",459,3
+sustainability-audit,"Licensing",458,2
+green-bond-advisory,"Licensing",418,3
+climate-risk-disclosure-advisory,"Licensing",461,3
+circular-economy-compliance-advisory,"Licensing",379,2
+green-building-certification-advisory-igbcleed,"Licensing",419,2
+corporate-governance-advisory,"Corporate & Advisory",440,2
+csr-policy-drafting-and-compliance,"Corporate & Advisory",509,2
+related-party-transaction-compliance,"Corporate & Advisory",480,2
+whistleblower-policy-drafting,"Corporate & Advisory",503,2
+posh-policy-and-compliance-prevention-of-sexual-harassment,"Corporate & Advisory",515,2
+board-evaluation-advisory,"Corporate & Advisory",464,2
+fdi-reporting-fc-gpr-filing,"Corporate & Advisory",541,7
+fla-return-filing-foreign-liabilities-and-assets,"Corporate & Advisory",482,4
+odi-compliance-overseas-direct-investment,"Corporate & Advisory",498,4
+fema-compliance-advisory,"Corporate & Advisory",519,4
+external-commercial-borrowing-ecb-advisory,"Corporate & Advisory",500,4
+liaison-office-annual-activity-certificate,"Corporate & Advisory",535,4
+rbi-compounding-application,"Corporate & Advisory",528,4
+compounding-of-fema-contraventions,"Corporate & Advisory",493,4
+branch-office-compliance-certificate,"Corporate & Advisory",492,4
+sebi-lodr-compliance-advisory,"Corporate & Advisory",408,3
+insider-trading-code-compliance,"Corporate & Advisory",401,3
+takeover-code-sast-advisory,"Corporate & Advisory",448,3
+delisting-of-securities-advisory,"Corporate & Advisory",416,3
+buyback-of-shares-compliance,"Corporate & Advisory",411,3
+rights-issue-preferential-allotment-compliance,"Corporate & Advisory",406,3
+business-valuation-registered-valuer,"Corporate & Advisory",450,3
+startup-valuation-for-femaincome-tax,"Corporate & Advisory",419,3
+merger-and-acquisition-due-diligence,"Corporate & Advisory",481,2
+financial-due-diligence,"Corporate & Advisory",433,2
+legal-due-diligence,"Corporate & Advisory",419,2
+share-valuation-for-esop,"Corporate & Advisory",509,3
+fairness-opinion-for-m-and-a,"Corporate & Advisory",492,3
+founders-agreement-drafting,"Corporate & Advisory",473,2
+shareholders-agreement-drafting,"Corporate & Advisory",592,1
+employment-agreement-drafting,"Corporate & Advisory",465,3
+non-disclosure-agreement-nda-drafting,"Corporate & Advisory",459,2
+vendor-and-service-agreement-drafting,"Corporate & Advisory",493,2
+franchise-agreement-drafting,"Corporate & Advisory",475,2
+terms-of-use-and-privacy-policy-drafting,"Corporate & Advisory",456,3
+distribution-agreement-drafting,"Corporate & Advisory",440,2
+loan-agreement-drafting,"Corporate & Advisory",450,4
+commercial-licensing-agreement-drafting,"Corporate & Advisory",489,2
+startup-india-tax-exemption-80-iac-application,"Corporate & Advisory",489,3
+angel-tax-exemption-advisory,"Corporate & Advisory",466,3
+esop-pool-structuring,"Corporate & Advisory",467,3
+safeconvertible-note-drafting,"Corporate & Advisory",454,3
+term-sheet-advisory,"Corporate & Advisory",505,2
+cap-table-management-advisory,"Corporate & Advisory",436,2
+due-diligence-data-room-preparation,"Corporate & Advisory",444,2
+series-funding-round-compliance,"Corporate & Advisory",450,3
+hr-policy-manual-drafting,"Corporate & Advisory",424,2
+employee-stock-option-plan-esop-administration,"Corporate & Advisory",449,2
+contract-labour-license-clra,"Corporate & Advisory",492,3
+inter-state-migrant-workman-license,"Corporate & Advisory",466,3
+maternity-benefit-act-compliance,"Corporate & Advisory",421,3
+equal-remuneration-act-compliance,"Corporate & Advisory",438,3
+standing-orders-certification,"Corporate & Advisory",430,3
+dpdp-act-compliance-advisory-digital-personal-data-protection,"Corporate & Advisory",516,4
+data-protection-officer-appointment-advisory,"Corporate & Advisory",454,4
+privacy-impact-assessment,"Corporate & Advisory",508,3
+cross-border-data-transfer-compliance,"Corporate & Advisory",461,3
+cyber-security-compliance-audit,"Corporate & Advisory",501,4
+cert-in-incident-reporting-compliance,"Corporate & Advisory",455,3
